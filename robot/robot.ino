@@ -3,16 +3,19 @@ Servo serIzq;   //8
 Servo serDer;   //7
 int pos = 0;
 
-int izqA = 10; 
-int izqB = 9; 
-int derA = 6; 
-int derB = 5; 
+//Pines al puente h
+const int izqA = 10; 
+const int izqB = 9; 
+const int derA = 6; 
+const int derB = 5; 
+
 int vel = 255;            // Velocidad de los motores (0-255)
 int estado = 'g';         // inicia detenido
 
-int pecho = 12;            // define el pin 2 como (pecho) para el Ultrasonido
-int ptrig = 11;            // define el pin 3 como (ptrig) para el Ultrasonido
-int duracion, distancia;  // para Calcular distacia
+//Sensor de ultrasonido
+const int pecho = 12;      // define el pin 12 como (pecho) para el Ultrasonido
+const int ptrig = 11;      // define el pin 11 como (ptrig) para el Ultrasonido
+int duracion, distancia;   // para Calcular distacia
 
 void setup()  { 
   Serial.begin(9600);    // inicia el puerto serial para comunicacion con el Bluetooth
